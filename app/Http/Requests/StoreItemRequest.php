@@ -8,11 +8,11 @@ use Illuminate\Foundation\Http\FormRequest;
 class StoreItemRequest extends FormRequest {
 
 
-    public function authorization(): bool {
+    public function authorize(): bool {
         return true;
     }
 
-    public function rule(): array {
+    public function rules(): array {
         return [
             'name' => ['required'],
             'description' => ['required']
